@@ -1,0 +1,9 @@
+.arrow {
+  color: rgba(255, 255, 255, 0.604);
+}
+
+.el {
+  height: 16px;
+  width: 16px;
+  background-color: green;
+}

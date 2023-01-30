@@ -10,12 +10,7 @@ export const Home = () => {
       <p className="text-white font-poppins text-3xl md:text-5xl font-semibold">
         <Typewriter
           options={{
-            strings: [
-              `I'm Sergio Gonzalez`, 
-              'Front-end Developer'
-            ],
             autoStart: true,
-            loop: true,
             pauseFor: 3000,
             delay: 200,
             deleteSpeed: 200
@@ -28,6 +23,7 @@ export const Home = () => {
               .typeString(`Front-End Developer`)
               .pauseFor(1000)
               .deleteChars(20)
+              .typeString(`I'm Sergio Gonzalez`)
               .start();
           }}
         />

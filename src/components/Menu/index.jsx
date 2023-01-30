@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Links } from "../Links/index";
+import anime from 'animejs/lib/anime.es.js';
 
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -7,6 +8,18 @@ export const Menu = () => {
   const handleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const animationRef = React.useRef(null);
+  React.useEffect(() => {
+    animationRef.current = anime({
+      targets: '.el',
+      scale: [
+        {value: 1.1, easing: 'easeOutSine', duration: 500},
+        {value: 1, easing: 'easeInOutQuad', duration: 1200}
+      ],
+      loop: true
+    });
+  }, []);
 
   return (
     <div className="bg-main-background">
@@ -25,7 +38,7 @@ export const Menu = () => {
           sm:flex 
           sm:flex-col"
       >
-        <h4 className="-rotate-6">{"{ Sagb }"}</h4>
+        <h4 className="el -rotate-6">{"{ Sagb }"}</h4>
         <Links />
       </div>
 
